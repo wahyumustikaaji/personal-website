@@ -1,0 +1,59 @@
+"use client";
+
+import { Kanit } from "next/font/google";
+import BoxReveal from "@/components/magicui/box-reveal";
+import { useEffect, useState } from "react";
+
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: '600',
+});
+
+const Hero: React.FC = () => {
+  const [visible, setVisible] = useState<boolean>(false);
+  const [visibleButton, setVisibleButton] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 1000);
+   
+    const timerButton = setTimeout(() => {
+      setVisibleButton(true);
+    }, 800);
+
+    return () => 
+        clearTimeout(timer);
+        clearTimeout(timerButton);
+  }, []);
+
+  return (
+    <div className="2xl:mx-auto px-16 h-screen flex flex-col justify-center items-start">
+      <div className={kanit.className}>
+        <BoxReveal duration={0.8}>
+          <p className="font-bold text-[130px] text-black leading-none">WAHYU AJI</p>
+        </BoxReveal>
+        <BoxReveal duration={0.8}>
+          <p className="font-bold text-[130px] text-black leading-none -mt-5">FRONTEND DEV</p>
+        </BoxReveal>
+      </div>
+        <p className={`transition-opacity mt-8 leading-[44px] text-black font-medium text-[38px] duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          With directed art guidance and web<br/> design, I support global companies<br/> in expanding their business.
+        </p>
+        <div className={`transition-opacit mt-12 duration-1000 ${visibleButton ? 'opacity-100' : 'opacity-0'}`}>
+            <button
+                className="group overflow-hidden relative border-[1px] border-black rounded-full w-[270px] py-3.5 text-lg font-medium"
+                >
+                <div>
+                    <span>wahyuma123@gmail.com</span>
+                </div>
+                <div className="absolute w-full h-full bg-black text-white translate-y-[15px] group-hover:-translate-y-[41.5px] flex justify-center items-center duration-500 transition-all ease-in-out">
+                    Let's Connect
+                </div>
+            </button>
+        </div>
+    </div>
+  );
+};
+
+export default Hero;
