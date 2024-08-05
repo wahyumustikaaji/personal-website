@@ -16,8 +16,10 @@ export default function Home() {
     <Example/>
     <Work/>
     <Velocity/>
-    <About/>
-    <HelpYou/>
+    <div className="relative">
+      <About/>
+      <HelpYou/>
+    </div>
     <Offer/>
     <Footer/>
     </>

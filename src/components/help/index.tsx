@@ -10,17 +10,17 @@ const kanit = Kanit({
 export default function HelpYou() {
     
     return(
-        <section className="bg-black pt-20">
+        <section className="bg-black sticky top-0 z-20">
             <div className="w-full bg-white rounded-t-[50px]">
                 <div className="px-20 pt-8">
                     <div className={kanit.className}>
                         <p className="text-[125px] text-neutral-800 font-semibold">HOW I CAN HELP YOU/</p>
                         <div className="w-full flex justify-end gap-10 mt-10 pr-20">
-                            <p className="text-neutral-800 text-xl font-extralight">(SERVICES)</p>
+                            <p className="text-neutral-800 text-xl font-extralight">(Services)</p>
                             <p className="text-neutral-800 text-[22px] max-w-sm">My obsession is to craft memorable digital experiences that represent your brand, serve a meaningful purpose, and drive tangible business results.</p>
                         </div>
                     <div className="mt-10 relative">
-                        <div className="flex bg-white items-start justify-between border-t-[1px] border-black sticky top-32 pb-[290px]">
+                        <div className="flex bg-white items-start justify-between border-t-[1px] border-black sticky top-32 pb-[230px]">
                             <div className="w-full">
                                 <p className="text-neutral-800 text-[58px] font-bold mt-2">Web Development</p>
                                 <p className="text-neutral-800 text-lg max-w-sm leading-6 mt-3">I create unique, custom-coded websites that are tailored to your brand. I focus on scalability, performance, accessibility, and engaging animations for a memorable experience.</p>
@@ -40,8 +40,11 @@ export default function HelpYou() {
                                         <p className="text-neutral-800 text-3xl font-bold flex gap-10 border-b-[1px] border-neutral-800 pb-3"><span className="text-2xl font-light">03</span>Company Profil</p>
                                     </li>
                                     <li>
-                                        <p className="text-neutral-800 text-3xl font-bold flex gap-10 border-b-[1px] border-neutral-800 pb-3"><span className="text-2xl font-light">04</span>CMS Integration</p>
-                                    </li>
+                                        <p className="text-neutral-800 text-3xl font-bold flex gap-10 border-b-[1px] border-neutral-800 pb-3"><span className="text-2xl font-light">04</span>Blog</p>
+                                    </li>   
+                                    <li>
+                                        <p className="text-neutral-800 text-3xl font-bold flex gap-10 border-b-[1px] border-neutral-800 pb-3"><span className="text-2xl font-light">05</span>Custom Website</p>
+                                    </li>   
                                 </ul>
                             </div>
                         </div>

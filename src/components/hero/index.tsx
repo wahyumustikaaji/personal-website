@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const kanit = Kanit({
   subsets: ['latin'],
-  weight: '600',
+  weight: '400',
 });
 
 const Hero: React.FC = () => {
@@ -16,11 +16,11 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(true);
-    }, 1000);
+    }, 1800);
    
     const timerButton = setTimeout(() => {
       setVisibleButton(true);
-    }, 800);
+    }, 1200);
 
     return () => 
         clearTimeout(timer);
@@ -28,19 +28,34 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="2xl:mx-auto px-16 h-screen flex flex-col justify-center items-start">
-      <div className={kanit.className}>
-        <BoxReveal duration={0.8}>
-          <p className="font-bold text-[130px] text-black leading-none">WAHYU AJI</p>
-        </BoxReveal>
-        <BoxReveal duration={0.8}>
-          <p className="font-bold text-[130px] text-black leading-none -mt-5">FRONTEND DEV</p>
-        </BoxReveal>
+    <div className="2xl:mx-auto px-16 h-screen flex flex-col justify-center items-start relative">
+      <div className="flex items-center justify-center w-full gap-10 relative">
+        <div className={`transition-opacity w-[100px] h-[100px] rounded-full gradient-background duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}></div>
+        <div className={kanit.className}>
+          <BoxReveal duration={0.8}>
+            <p className="font-bold text-[140px] text-black leading-none">
+              WAHYU AJI</p>
+          </BoxReveal>
+        </div>
       </div>
-        <p className={`transition-opacity mt-8 leading-[44px] text-black font-medium text-[38px] duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-          With directed art guidance and web<br/> design, I support global companies<br/> in expanding their business.
-        </p>
-        <div className={`transition-opacit mt-12 duration-1000 ${visibleButton ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="flex items-center justify-evenly w-full">
+        <div className={kanit.className}>
+            <BoxReveal duration={0.8}>
+              <p className="font-bold text-[140px] text-black leading-none">FRONTEND</p>
+            </BoxReveal>
+        </div>
+          <p className={`transition-opacity text-black font-medium text-lg font-sans duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+            With directed art guidance and web<br/> design, I support global companies<br/> in expanding their business.
+          </p>
+      </div>
+      <div className="flex items-center justify-center w-full">
+        <div className={kanit.className}>
+          <BoxReveal duration={0.8}>
+            <p className="font-bold text-[140px] text-black leading-none">DEVELOPER</p>
+          </BoxReveal>
+        </div>
+      </div>
+        <div className={`transition-opacit mt-12 duration-1000 flex items-center justify-center w-full ${visibleButton ? 'opacity-100' : 'opacity-0'}`}>
             <button
                 className="group overflow-hidden relative border-[1px] border-black rounded-full w-[270px] py-3.5 text-lg font-medium"
                 >

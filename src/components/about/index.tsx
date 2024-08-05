@@ -13,9 +13,8 @@ export default function About() {
     }, [theme]);
 
     return(
-        <div>
-            <div className="h-screen flex items-center justify-center relative bg-black">
-                <div className="w-full flex items-start justify-between px-20 absolute z-10">
+            <div className="h-screen flex items-center justify-center bg-black z-0 sticky top-0">
+                <div className="w-full flex items-start justify-between px-20">
                     <div className="w-32">
                         <p className="text-white text-lg font-medium">(About me)</p>
                     </div>
@@ -35,6 +34,5 @@ export default function About() {
                     refresh
                 />
             </div>
-        </div>
     )
 }
