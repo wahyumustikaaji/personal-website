@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
 
 interface LetterPullupProps {
   className?: string;
@@ -14,6 +15,9 @@ export default function LetterPullup({
   words,
   delay,
 }: LetterPullupProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   const letters = words.split("");
 
   const pullupVariant = {
@@ -22,19 +26,41 @@ export default function LetterPullup({
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * (delay ? delay : 0.05), // By default, delay each letter's animation by 0.05 seconds
+        delay: i * (delay ? delay : 0.05),
       },
     }),
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.75 } 
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" ref={containerRef}>
       {letters.map((letter, i) => (
         <motion.h1
           key={i}
           variants={pullupVariant}
           initial="initial"
-          animate="animate"
+          animate={isVisible ? "animate" : "initial"}
           custom={i}
           className={cn(
             "font-display text-center text-[130px] leading-[120px] font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white",

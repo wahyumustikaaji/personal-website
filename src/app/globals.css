@@ -122,3 +122,12 @@ a:hover::before {
     background-position: 0% 50%;
   }
 }
+
+html[data-scroll-orientation="horizontal"] {
+    body {
+        width: fit-content;
+    }
+    [data-scroll-container] {
+        display: flex;
+    }
+}

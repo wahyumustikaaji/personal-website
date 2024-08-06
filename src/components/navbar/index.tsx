@@ -7,9 +7,9 @@ export default function Navbar() {
       id="top"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 10, duration: 1 }}
+      transition={{ type: "spring", stiffness: 10, duration: 1, ease: "easeInOut", delay: 0.5 }}
     >
-      <div className="bg-white w-full px-16 py-8 absolute top-0 z-40">
+      <div className="bg-transparant w-full px-16 py-8 absolute top-0 z-40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-40">
             <button className="font-extrabold leading-4 text-sm text-black">

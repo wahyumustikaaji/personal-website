@@ -1,6 +1,7 @@
 "use client";
  
 import { Kanit } from "next/font/google";
+import {motion} from "framer-motion"
 
 const kanit = Kanit({
   subsets: ['latin'],

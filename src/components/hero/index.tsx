@@ -3,6 +3,7 @@
 import { Kanit } from "next/font/google";
 import BoxReveal from "@/components/magicui/box-reveal";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -30,7 +31,12 @@ const Hero: React.FC = () => {
   return (
     <div className="2xl:mx-auto px-16 h-screen flex flex-col justify-center items-start relative">
       <div className="flex items-center justify-center w-full gap-10 relative">
-        <div className={`transition-opacity w-[100px] h-[100px] rounded-full gradient-background duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}></div>
+        <motion.div
+        initial={{scale: 0}}
+        animate={{scale: 1}}
+        transition={{ease: [0.6, 0.01, -0.05, 0.95], duration: 1.5, delay: 1.5}}
+        className="transition-opacity w-[100px] h-[100px] rounded-full gradient-background">
+        </motion.div>
         <div className={kanit.className}>
           <BoxReveal duration={0.8}>
             <p className="font-bold text-[140px] text-black leading-none">
