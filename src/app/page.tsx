@@ -1,5 +1,6 @@
 "use client";
 
+import HomePage from "@/layout/home";
 import About from "@/components/about";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
@@ -12,16 +13,7 @@ import HelpYou from "@/components/help";
 export default function Home() {
   return (
     <div>
-    <Navbar/>
-    <Hero/>
-    <Work/>
-    <Velocity/>
-    <div className="relative">
-      <About/>
-      <HelpYou/>
-    </div>
-    <Offer/>
-    <Footer/>
+      <HomePage/>
     </div>
   );
 }
