@@ -20,8 +20,8 @@ export default function Offer() {
     }, [theme]);
     
     return(
-        <div className="h-screen flex items-center justify-center py-10 px-14">
-            <div className="bg-black rounded-lg w-full h-full relative">
+        <div className="h-[110vh] flex items-center justify-center py-10 px-14">
+            <div className="bg-[#171010] rounded-lg w-full h-[80vh] relative">
                 <div className="w-full h-full flex flex-col items-center justify-center absolute z-10">
                     <p className="text-white text-xl font-medium mb-5">(Want to have your dream website)</p>
                     <div className={kanit.className}>
@@ -34,7 +34,7 @@ export default function Offer() {
                         <div>
                             <span>Book A Call</span>
                         </div>
-                        <div className="absolute w-full h-full bg-white text-black translate-y-[15px] group-hover:-translate-y-[41.5px] flex justify-center items-center duration-500 transition-all ease-in-out">
+                        <div className="absolute w-full h-full bg-white text-[#171010] translate-y-[15px] group-hover:-translate-y-[42.5px] flex justify-center items-center duration-500 transition-all ease-in-out">
                             Let's Go
                         </div>
                     </button>

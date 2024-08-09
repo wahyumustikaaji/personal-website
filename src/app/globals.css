@@ -64,7 +64,7 @@ html {
 }
 
 a {
-	color: black;
+	color: #171010;
   position: relative;
 }
 
@@ -73,7 +73,7 @@ a::before {
   position: absolute;
   width: 100%;
   height: 1.5px;
-  background-color: black;
+  background-color: #171010;
   bottom: 0;
   left: 0;
   transform-origin: right;
@@ -86,9 +86,13 @@ a:hover::before {
   transform: scaleX(1);
 }
 
+a.white-before::before {
+  background-color: #F7F9F2;
+}
+
 ::selection {
   background-color: black;
-  color: white;
+  color: #F7F9F2;
 }
 
 .footer{
@@ -149,7 +153,7 @@ html[data-scroll-orientation="horizontal"] {
   justify-content: flex-end;
   align-items: flex-end;
 
-  background-color: black;
+  background-color: #171010;
 
   .counter-container {
     overflow: hidden;
@@ -165,7 +169,7 @@ html[data-scroll-orientation="horizontal"] {
     font-size: 30vw;
     line-height: 30vw;
     font-weight: 300;
-    color: white;
+    color: #F7F9F2;
   }
 }
 

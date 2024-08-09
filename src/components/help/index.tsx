@@ -12,7 +12,7 @@ export default function HelpYou() {
     
     return(
         <section className="bg-black sticky top-0 z-20">
-            <div className="w-full bg-white rounded-t-[50px]">
+            <div className="w-full bg-white">
                 <div className="px-20 pt-8">
                     <div className={kanit.className}>
                         <p className="text-[125px] text-neutral-800 font-semibold">HOW I CAN HELP YOU/</p>
