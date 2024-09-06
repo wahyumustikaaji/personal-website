@@ -10,6 +10,8 @@ import Work from "@/components/work";
 import { useTheme } from "next-themes";
 import Particles from "@/components/magicui/particles";
 import Offer from "@/components/offer";
+import Journey from "@/components/about/journey";
+import Navbar from "@/components/navbar";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -129,37 +131,7 @@ export default function HomePage() {
             <div id="top"  className="w-full absolute top-0"
             ref={navRef}
             >
-            <div
-            data-scroll
-            className="bg-transparant w-full px-16 py-8">
-                <div className="flex items-center justify-between">
-                <div className="flex items-center gap-40">
-                    <button className="font-extrabold leading-4 text-sm text-[#171010]">
-                    WAHYUAJI <br /> PORTFOLIO
-                    </button>
-                    <p className="font-medium text-[#171010] text-lg">Available for work</p>
-                </div>
-                <div className="flex items-center gap-32">
-                    <div className="flex items-center gap-1">
-                    <a href="#" className="text-lg text-[#171010] font-medium">
-                        Projects,
-                    </a>
-                    <a href="#" className="text-lg text-[#171010] font-medium">
-                        About,
-                    </a>
-                    <a
-                        href="https://medium.com/@wahyuma123"
-                        className="text-lg text-[#171010] font-medium"
-                    >
-                        Blog
-                    </a>
-                    </div>
-                    <a href="mailto:wahyuma123@gmail.com" className="text-lg text-[#171010] font-medium">
-                    wahyuma123@gmail.com
-                    </a>
-                </div>
-                </div>
-            </div>
+                <Navbar/>
             </div>
 
             <div 
@@ -171,7 +143,7 @@ export default function HomePage() {
                 ref={titleRef}
                 className="flex flex-col justify-center items-center w-full mt-10">
                     <div className="flex items-center justify-center w-full gap-10 relative">
-                        <p className="text-[13px] font-medium">GOOD DEVELOPER IS HONEST</p>
+                        <p className="text-base font-medium">GOOD DEVELOPER IS HONEST</p>
                         <div className={kanit.className}>
                         <div>
                             <p className="font-bold text-[140px] text-[#171010] leading-none">
@@ -230,6 +202,13 @@ export default function HomePage() {
             <div
             data-scroll
             data-scroll-speed="5"
+            >
+                <Journey/>
+            </div>
+
+            <div
+            data-scroll
+            data-scroll-speed="0"
             >
                 <Offer/>
             </div>
