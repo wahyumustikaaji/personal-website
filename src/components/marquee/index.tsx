@@ -17,6 +17,9 @@ const reviews = [
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbodQVEoT0TbrcZxQsUDnBhAEdVBN9XvmNMQ&s",
   },
+  {
+    img: "https://ih1.redbubble.net/image.3013846881.2138/st,small,507x507-pad,600x600,f8f8f8.u2.jpg",
+  },
 ];
 
 const ReviewCard = ({ img }: { img: string }) => {

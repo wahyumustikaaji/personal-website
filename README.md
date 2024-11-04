@@ -26,8 +26,6 @@ Clone the repository and install the dependencies:
 ```bash
 git clone https://github.com/WayuAji30/personal-website.git
 
-```bash
 cd personal-website
 
-```bash
 npm install

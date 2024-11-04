@@ -12,6 +12,7 @@ import Particles from "@/components/magicui/particles";
 import Offer from "@/components/offer";
 import Journey from "@/components/about/journey";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -123,7 +124,6 @@ export default function HomePage() {
             </div>
         </div>
 
-
         <div
         data-scroll-container
         ref={scrollRef}
@@ -211,6 +211,13 @@ export default function HomePage() {
             data-scroll-speed="0"
             >
                 <Offer/>
+            </div>
+            
+            <div
+            data-scroll
+            data-scroll-speed="0"
+            >
+                <Footer/>
             </div>
         </div>
     </>
