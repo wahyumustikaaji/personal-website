@@ -34,17 +34,17 @@ export default function Footer() {
                     <p className="text-base text-black font-medium mb-5">
                         Link
                     </p>
-                    <a href="#" className="text-lg text-black font-medium">Home</a>
-                    <a href="#" className="text-lg text-black font-medium">About</a>
-                    <a href="#" className="text-lg text-black font-medium">Project</a>
+                    <a href="/" className="text-lg text-black font-medium">Home</a>
+                    <a href="/about" className="text-lg text-black font-medium">About</a>
+                    <a href="/projects" className="text-lg text-black font-medium">Project</a>
                 </div>
                 <div className="flex flex-col items-start gap-1">
                     <p className="text-base text-black font-medium mb-5">
                         Social Media
                     </p>
-                    <a href="#" className="text-lg text-black font-medium">Instagram</a>
-                    <a href="#" className="text-lg text-black font-medium">LinkedIn</a>
-                    <a href="#" className="text-lg text-black font-medium">GitHub</a>
+                    <a href="https://instagram.com/wahyumustikaaji_" className="text-lg text-black font-medium">Instagram</a>
+                    <a href="www.linkedin.com/in/wahyumustikaaji" className="text-lg text-black font-medium">LinkedIn</a>
+                    <a href="https://github.com/WayuAji30" className="text-lg text-black font-medium">GitHub</a>
                 </div>
             </div>
             <div className="bg-[#171010] px-20 py-5 mt-24">

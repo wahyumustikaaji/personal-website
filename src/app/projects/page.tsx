@@ -1,11 +1,11 @@
 "use client";
 
-import HomePage from "@/layout/home";
+import ProjectsPage from "@/layout/projects";
 
 export default function Home() {
   return (
     <div>
-      <HomePage/>
+      <ProjectsPage/>
     </div>
   );
 }

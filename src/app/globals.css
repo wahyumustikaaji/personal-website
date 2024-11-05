@@ -81,6 +81,10 @@ a::before {
   transition: transform .4s ease-in;
 }
 
+.link-white::before {
+  background-color: white !important;
+}
+
 a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
