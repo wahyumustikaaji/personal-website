@@ -10,6 +10,7 @@ import Footer from "@/components/footer";
 import AboutHero from "@/components/heroAbout";
 import DescMe from "@/components/descriptionMe";
 import Velocity from "@/components/velocityScroll";
+import Loader from "@/components/loader";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -85,42 +86,8 @@ export default function AboutPage() {
     }, [])
   return (
     <>
-        <div className="loader-container" ref={loaderRef}>
-            <div className="counter-container">
-            <ul className="counter-list" ref={countRef}>
-                <li>
-                <h3>0</h3>
-                </li>
-                <li>
-                <h3>3</h3>
-                </li>
-                <li>
-                <h3>7</h3>
-                </li>
-                <li>
-                <h3>9</h3>
-                </li>
-            </ul>
-            </div>
-
-            <div className="counter-container">
-            <ul className="counter-list" ref={countRef2}>
-                <li>
-                <h3>8</h3>
-                </li>
-                <li>
-                <h3>0</h3>
-                </li>
-                <li>
-                <h3>8</h3>
-                </li>
-                <li>
-                <h3>9</h3>
-                </li>
-            </ul>
-            </div>
-        </div>
-
+    <Loader loaderRef={loaderRef} countRef={countRef} countRef2={countRef2} />
+    
         <div
         data-scroll-container
         ref={scrollRef}

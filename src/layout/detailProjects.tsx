@@ -13,6 +13,8 @@ import Velocity from "@/components/velocityScroll";
 import ProjectsHero from "@/components/heroProjects";
 import Projects from "@/components/projects";
 import Loader from "@/components/loader";
+import HeroDetailWork from "@/components/detailWork/hero";
+import DetailWork from "@/components/detailWork";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -26,7 +28,7 @@ function getSectionHeight(element: HTMLUListElement){
     return height / childElementCount;
 }
 
-export default function ProjectsPage() {
+export default function DetailProjectsPage() {
     const { theme } = useTheme();
     const [color, setColor] = useState("#ffffff");
 
@@ -103,14 +105,11 @@ export default function ProjectsPage() {
             >
                 <Navbar textColor="text-white" bgColor="link-white"/>
             </div> 
-                <ProjectsHero/>
+                <HeroDetailWork/>
             </div>
 
-            <div 
-            data-scroll
-            data-scroll-speed="0"
-            >
-                <Projects/>
+            <div>
+                <DetailWork/>
             </div>
 
             <div

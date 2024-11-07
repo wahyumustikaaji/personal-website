@@ -11,7 +11,7 @@ interface CardProps {
   };
 }
 
-const Example = () => {
+const HorizontalScroll = () => {
   return (
       <HorizontalScrollCarousel />
   );
@@ -88,7 +88,7 @@ const Card = ({ card }: CardProps) => {
   );
 };
 
-export default Example;
+export default HorizontalScroll;
 
 const cards = [
   {

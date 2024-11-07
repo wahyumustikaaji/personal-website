@@ -3,6 +3,7 @@
 import { Kanit } from "next/font/google";
 import { useEffect, useState, useRef } from "react";
 import { animate } from "motion";
+import Image from "next/image";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -60,10 +61,13 @@ export default function DescMe() {
                     </div>
                 </div>
                 <div className="w-full">
-                    <img 
-                    src="https://i.ibb.co.com/dBMQfsK/pp.jpg" 
-                    alt="wahyu aji" 
-                    className="h-[800px] object-cover w-[600px] mx-auto rounded-2xl"
+                    <Image 
+                    src="/images/profil.jpg"
+                    width={600}
+                    height={800}
+                    quality={100}
+                    alt="Picture of the author"
+                    className="object-cover mx-auto rounded-2xl"
                     />
                 </div>
             </div>

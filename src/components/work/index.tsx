@@ -1,24 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import Image from "next/image";
 import GradualSpacing from "../magicui/gradual-spacing";
 
-// Define your project data here
 const projects = [
     {
         title: "AETERNUM",
         description: "Blockchain, Web3",
         mainImage: "https://img.freepik.com/premium-photo/dark-green-color-block-brick-wall-texture-pattern-st-patrick-s-day-card-background-also-have-copy-space-text_685067-3709.jpg",
-        overlayImage: "https://i.ibb.co.com/qBBXNgd/Screenshot-1487.png",
+        overlayImage: "/images/projects/aeternum.png",
         scrollSpeed: 3,
-        link: "#",
+        link: "/aeternum",
     },
     {
         title: "PROJECTHUB",
         description: "Marketplace Project",
         mainImage: "https://png.pngtree.com/thumb_back/fw800/background/20231219/pngtree-blue-workplace-business-office-background-image_15522876.png",
-        overlayImage: "https://i.ibb.co.com/n1mq3b0/Screenshot-1486.png",
+        overlayImage: "/images/projects/projecthub.png",
         scrollSpeed: 2,
         link: "#",
     },
@@ -26,7 +24,7 @@ const projects = [
         title: "SOLUSI TERNAK",
         description: "AI, Farm",
         mainImage: "https://img.freepik.com/premium-photo/3d-illustration-agriculture-field-isolated-white-background-farming-concept_439318-585.jpg",
-        overlayImage: "https://i.ibb.co.com/S3TdgRQ/Screenshot-1489.png",
+        overlayImage: "/images/projects/solusiternak.png",
         scrollSpeed: 2,
         link: "#",
     },
@@ -34,7 +32,7 @@ const projects = [
         title: "PUSTAKA CERDAS",
         description: "Smart Library, AI",
         mainImage: "https://png.pngtree.com/background/20230424/original/pngtree-person-walking-in-a-red-library-hall-with-bookshelves-picture-image_2460379.jpg",
-        overlayImage: "https://i.ibb.co.com/Wx4pJBx/Screenshot-1488.png",
+        overlayImage: "/images/projects/pustakacerdas.png",
         scrollSpeed: 2,
         link: "#",
     }
@@ -68,7 +66,15 @@ export default function Work() {
                                     <div className="w-[800px] h-[500px] relative">
                                         <img className="rounded-[40px] w-full h-full object-cover" src={project.mainImage} alt="" />
                                         <div className="w-[700px] h-[350px] bg-black absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg">
-                                            <img className="rounded-lg w-full h-full object-cover" src={project.overlayImage} alt="" />
+                                            <Image 
+                                            src={project.overlayImage}
+                                            alt="Website" 
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="rounded-lg"
+                                            quality={100}
+                                            priority
+                                            />
                                         </div>
                                     </div>
                                     <div>
