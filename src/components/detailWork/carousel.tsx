@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 const imgs: string[] = [
-  "/images/projects/aeternum.png",
-  "/images/projects/projecthub.png",
-  "/images/projects/solusiternak.png",
-  "/images/projects/pustakacerdas.png",
+  "/images/projects/aeternum/aeternum.png",
+  "/images/projects/aeternum/aeternum.png",
+  "/images/projects/aeternum/aeternum.png",
+  "/images/projects/aeternum/aeternum.png",
 ];
 
 const DRAG_BUFFER = 50;

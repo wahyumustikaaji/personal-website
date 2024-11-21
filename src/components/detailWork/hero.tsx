@@ -1,7 +1,6 @@
 "use client";
 
 import { Kanit } from "next/font/google";
-import Meteors from "../ui/meteors";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -12,8 +11,7 @@ const labels = ["Blockchain", "Web3", "Reactjs", "Tailwind CSS", "Smart Contract
 
 export default function HeroDetailWork() {
     return (
-        <div className="bg-[#171010] pt-52 px-16 w-full relative">
-            <Meteors number={30} />
+        <div className="absolute bottom-0 px-16">
             <p className="text-white text-base italic font-serif">2024</p>
             <div className={`${kanit.className} flex items-center justify-between w-full gap-28 pb-14`}>
                 <p className="font-bold text-[170px] text-white leading-none">

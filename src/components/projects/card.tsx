@@ -10,22 +10,22 @@ interface CardData {
 const cardData: CardData[] = [
   {
     backgroundImage: 'https://img.freepik.com/premium-photo/dark-green-color-block-brick-wall-texture-pattern-st-patrick-s-day-card-background-also-have-copy-space-text_685067-3709.jpg',
-    overlayImage: '/images/projects/aeternum.png',
+    overlayImage: '/images/projects/aeternum/aeternum.png',
     link: '/aeternum'
   },
   {
     backgroundImage: 'https://png.pngtree.com/thumb_back/fw800/background/20231219/pngtree-blue-workplace-business-office-background-image_15522876.png',
-    overlayImage: '/images/projects/projecthub.png',
+    overlayImage: '/images/projects/projecthub/projecthub.png',
     link: '/'
   },
   {
     backgroundImage: 'https://img.freepik.com/premium-photo/3d-illustration-agriculture-field-isolated-white-background-farming-concept_439318-585.jpg',
-    overlayImage: '/images/projects/solusiternak.png',
+    overlayImage: '/images/projects/solusiternak/solusiternak.png',
     link: '/'
   },
   {
     backgroundImage: 'https://png.pngtree.com/background/20230424/original/pngtree-person-walking-in-a-red-library-hall-with-bookshelves-picture-image_2460379.jpg',
-    overlayImage: '/images/projects/pustakacerdas.png',
+    overlayImage: '/images/projects/pustakacerdas/pustakacerdas.png',
     link: '/'
   },
 ];

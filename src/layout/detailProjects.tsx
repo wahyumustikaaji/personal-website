@@ -7,14 +7,11 @@ import { timeline, animate, stagger } from "motion";
 import { useTheme } from "next-themes";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import AboutHero from "@/components/heroAbout";
-import DescMe from "@/components/descriptionMe";
-import Velocity from "@/components/velocityScroll";
-import ProjectsHero from "@/components/heroProjects";
-import Projects from "@/components/projects";
-import Loader from "@/components/loader";
 import HeroDetailWork from "@/components/detailWork/hero";
 import DetailWork from "@/components/detailWork";
+import MoreProjects from "@/components/detailWork/more";
+import Meteors from "@/components/ui/meteors";
+import Loader from "@/components/loader";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -39,7 +36,8 @@ export default function DetailProjectsPage() {
 
     const loaderRef = useRef<HTMLDivElement | null>(null);
     const navRef = useRef<HTMLDivElement | null>(null);
-    const titleRef = useRef<HTMLDivElement | null>(null);
+    const heroRef = useRef<HTMLDivElement | null>(null);
+    const detailRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         setColor(theme === "dark" ? "#ffffff" : "#ffffff");
@@ -71,12 +69,12 @@ export default function DetailProjectsPage() {
 
     useEffect(() => {
         const sequence = [
-            [titleRef.current, {scale: 1.2}],
             [navRef.current, {y: -100}, {at: "<"}],
             [countRef.current, {opacity: 0}, {at: "<"}],
             [countRef2.current, {opacity: 0}, {at: "<"}],
             [loaderRef.current, {y: "-100vh"}, {at: "-0.5"}],
-            [titleRef.current, {scale: 1}, {at: "-0.5"}],
+            [heroRef.current, {y: "-30vh"}, {at: "-0.3"}],
+            [detailRef.current, {y: "-30vh"}, {at: "<"}],
             [navRef.current, {y: 0}, {at: "-0.8"}],
         ]; 
     
@@ -90,7 +88,7 @@ export default function DetailProjectsPage() {
     }, [])
   return (
     <>
-        <Loader loaderRef={loaderRef} countRef={countRef} countRef2={countRef2} />
+        {/* <Loader loaderRef={loaderRef} countRef={countRef} countRef2={countRef2} /> */}
 
         <div
         data-scroll-container
@@ -105,11 +103,25 @@ export default function DetailProjectsPage() {
             >
                 <Navbar textColor="text-white" bgColor="link-white"/>
             </div> 
+            <div>
+            <div ref={heroRef} className="bg-[#171010] h-[100vh] w-full relative">
+                <Meteors number={30} />
                 <HeroDetailWork/>
             </div>
+            </div>
+            </div>
 
-            <div>
+            <div
+            ref={detailRef}
+            >
                 <DetailWork/>
+            </div>
+
+            <div
+            data-scroll
+            data-scroll-speed="0"
+            >
+                <MoreProjects/>
             </div>
 
             <div
